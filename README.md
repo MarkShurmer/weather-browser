@@ -12,6 +12,18 @@ npm i
 to build everything  
 gulp build-all
 
+## Testing
+to run tests  
+npm test for continuous
+npm run-script test-single-run for single run
+
 ## running
 to run using browser sync  
-gulp serve
+gulp serve  
+which will browse to localhost:3000
+
+## future enhancements (with more time)
+more ui eye candy
+more tests
+showing two cities at the same time
+configure which details are shown

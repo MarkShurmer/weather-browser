@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 var config = new Config();
 
 gulp.task('copy-html', function () {
-  return gulp.src([config.source + '/**/*.html'])
+  return gulp.src([config.source + '/**/*.html', config.source + '/**/*.ico'])
     .pipe(gulp.dest(config.output));
 });
 
