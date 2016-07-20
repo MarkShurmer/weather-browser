@@ -1,0 +1,74 @@
+.wt-weatherpage {
+  .header {
+    display: block;
+    margin: 10px;
+
+    .city-info {
+      font-size: 18px;
+      font-size: 1.5rem;
+      display: inherit;
+      position: absolute;
+      left: 46.5%;
+      top: 4rem;
+    }
+  }
+
+  .weather-pane {
+    .weather-list {
+      list-style: none;
+      -webkit-transition: opacity 2s; /* Safari */
+      transition: opacity 2s;
+
+      &.loading {
+        opacity: 0.1;
+      }
+
+      //&.loaded {
+      //  opacity: 1;
+      //}
+
+      li {
+        list-style-type: none;
+        display: inline;
+        padding-right: 20px;
+
+        .item {
+          margin: 2px;
+          border: #4b86f044 solid 1px;
+          padding: 5px;
+          border-radius: 5px;
+          display: inline-block;
+          vertical-align: top;
+
+          .sections {
+            .section {
+              margin: 2px;
+              background: #eff1f2;
+              border: lightgray solid 1px;
+              padding: 3px 10px 3px 10px;
+              border-radius: 3px;
+
+              .info-temp {
+              }
+
+              .info-part {
+                margin: 1px;
+              }
+            }
+          }
+          .info-img {
+
+          }
+
+          .info-max {
+
+          }
+
+          .info-min {
+
+          }
+        }
+      }
+    }
+  }
+}

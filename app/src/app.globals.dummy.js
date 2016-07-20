@@ -1,0 +1,1 @@
+var dateFormat = jasmine.createSpyObj(['dateFormat']);

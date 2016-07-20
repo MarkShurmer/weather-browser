@@ -1,0 +1,37 @@
+<div class="wt-weatherpage">
+  <div class="header">
+    <label for="city">Choose city</label>
+    <select id="city" ng-model="$ctrl.selectedCity" ng-change="$ctrl.changeCity()"
+            ng-options="city for city in $ctrl.cities">
+    </select>
+
+    <div class="city-info">
+      {{$ctrl.weatherData.cityName}}
+    </div>
+
+  </div>
+  <div class="weather-pane">
+    <ul class="weather-list" ng-class="$ctrl.isLoading ? 'loading' : 'loaded'">
+      <li ng-repeat="day in $ctrl.weatherData.forecast">
+        <div class="item">
+          <div>{{day.dayDesc}}</div>
+          <div class="info-min">{{day.minTemp | number: 1}} to {{day.maxTemp | number: 1}} °C</div>
+          <div class="sections">
+             <div class="section" ng-repeat="section in day.sections">
+               <div class="info-part info-time">{{section.time}}</div>
+               <img class="info-img info-part" ng-src="http://openweathermap.org/img/w/{{section.weatherIcon}}.png"
+                    alt="Days weather type">
+               <div class="info-part">{{section.weatherDesc}}</div>
+
+               <div class="info-temp info-part">{{section.temp | number: 1}} °C</div>
+               <div class="info-part">Humidity {{section.humidity | number: 0}}%</div>
+             </div>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
